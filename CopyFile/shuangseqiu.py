@@ -1,5 +1,6 @@
 # encoding:gbk
 import random
+import thread
 redResult = []
 greenResult = 0
 i=0
@@ -12,4 +13,4 @@ while True:
         greenResult = random.randint(1,16)
         break
 redResult.sort()
-print "红球:",redResult," 篮球:",greenResult
+print "红球:",redResult," 蓝球:",greenResult

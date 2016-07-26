@@ -36,13 +36,13 @@ jingValue = sheet0.col_values(5)
 # Œ≥∂»
 weiValue = sheet0.col_values(6)
 
-
 x = 0
 for i in cityTemp:
     k = -1
     x += 1
     # fileTemp = file(r'C:\Users\abc\Desktop'+os.sep+str(x)+'.txt','w')
     strTemp = str(i)
+    strTemp = strTemp.strip()
     # fileTemp = file(r'C:\Users\abc\Desktop'+os.sep+strTemp+'.txt','w')
     if not os.path.isdir(fileTargetDir):
         os.makedirs(fileTargetDir)
@@ -58,3 +58,4 @@ for i in cityTemp:
             if mJingValue =='' or mWeiValue == '':
                 continue
             fileTemp.write(str(mJingValue)+','+str(mWeiValue)+','+str(mCellValue)+','+str(mLacValue)+'\n')
+print "\n\r∂¡»°Ω· ¯"
