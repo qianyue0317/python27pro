@@ -14,11 +14,12 @@ if sys.getdefaultencoding() != defaultencoding:
 
 
 def func1(dirName):
-    for root, parent, files in os.walk(unicode(dirName,'utf-8')):
+    for root, parent, files in os.walk(unicode(dirName, 'utf-8')):
         for fileName in files:
             if fileName.endswith('.docx') and not fileName.startswith('~$'):
                 # print('开始转换')
                 dealFunc(root, fileName)
+
 
 if '__main__' == __name__:
     while True:
