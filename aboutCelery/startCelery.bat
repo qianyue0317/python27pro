@@ -1,0 +1,1 @@
+celery -A celeryContainer.mycelery -l info worker
