@@ -63,13 +63,20 @@ def KeyStroke(event):
     return True
 
 
+def mouseMove(event):
+    print(event)
+    return 1
+
+
 def main():
     # 创建并注册hook管理器
     kl = pyHook.HookManager()
     kl.KeyDown = KeyStroke
+    kl.MouseMove = mouseMove
 
     # 注册hook并执行
     kl.HookKeyboard()
+    kl.HookMouse()
     pythoncom.PumpMessages()
 
 
